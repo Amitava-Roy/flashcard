@@ -1,13 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+}
+
+@layer components {
+  .input {
+    @apply text-blue-600/100
+    font-semibold
+    tracking-wider;
+  }
+  .marginContent {
+    @apply mt-6;
+  }
+  .fieldBorder {
+    @apply border-2 
+    rounded-lg 
+    border-slate-500/25;
+  }
+  .borderError {
+    @apply border-2 
+    rounded-lg 
+    border-red-300;
+  }
+  .inputFocus {
+    @apply focus:border-none focus:outline-0 focus:ring-2 focus:ring-blue-300 focus:inset-1;
+  }
+  /* cards styles */
+  .first-row-div {
+    @apply bg-stone-50 shadow-sm p-5 pt-6 rounded-lg flex flex-col gap-2 items-center relative;
+  }
+  .first-row-image {
+    @apply rounded-full w-12 h-12 absolute top-0 -translate-y-1/2;
+  }
+  .first-row-title {
+    @apply mt-1 capitalize font-bold text-lg tracking-wide text-stone-700;
+  }
+  .first-row-details {
+    @apply text-stone-500 text-sm font-medium text-center;
+  }
+  .first-row-cards {
+    @apply text-stone-500 text-sm font-medium text-center;
+  }
+  .first-row-link {
+    @apply capitalize font-medium text-center text-base px-3 py-0 w-48 border-2 border-red-600/100;
+  }
 }
