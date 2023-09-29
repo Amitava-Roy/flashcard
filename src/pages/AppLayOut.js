@@ -1,14 +1,16 @@
 import { NavLink, Outlet } from "react-router-dom";
+import logo from "../Images/favicon.jpg";
 
 function AppLayOut() {
   return (
     <div className="h-screen border-s-4">
-      <header className="bg-slate-50 h-10 flex  justify-start border-b-[1px] border-slate-300/80">
-        <p className="text-red-600 font-semibold text-xl pl-10 input">
-          Logo
+      <header className="bg-slate-50/100 h-[5%] flex   justify-start border-b-[1px] border-slate-300/80">
+        <img src={logo} alt="logo" className=" ml-6" />
+        <p className="text-red-600 font-semibold text-xl  input">
+          Flashcard
         </p>
       </header>
-      <section className="bg-red-100 h-full">
+      <section className="bg-red-100 h-screen">
         <main className="w-3/4 m-auto">
           <div className="pl-6">
             <h3 className="mb-2.5 text-xl text-slate-800 font-bold tracking-widest input">
@@ -23,7 +25,7 @@ function AppLayOut() {
                     : "font-semibold text-blue-600/100 tracking-wide"
                 }
               >
-                Creat New
+                Create New
               </NavLink>
               <NavLink
                 to="/MyFlashCard"

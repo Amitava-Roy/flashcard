@@ -36,7 +36,7 @@ code {
     border-red-300;
   }
   .inputFocus {
-    @apply focus:border-none focus:outline-0 focus:ring-2 focus:ring-blue-300 focus:inset-1;
+    @apply md:w-2/4 focus:border-none focus:outline-0 focus:ring-2 focus:ring-blue-300 focus:inset-1;
   }
   /* cards styles */
   .first-row-div {

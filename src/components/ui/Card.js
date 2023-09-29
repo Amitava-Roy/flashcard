@@ -37,8 +37,7 @@ function Card({ data, cardNo }) {
             : "col-span-2 text-stone-500 text-sm font-medium "
         }
       >
-        {description} some more text for styling and also to
-        check
+        {description}
       </p>
       <p
         className={

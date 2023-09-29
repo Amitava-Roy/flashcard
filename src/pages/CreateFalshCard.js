@@ -90,8 +90,8 @@ function CreateFlashCard() {
           onBlur={formik.handleBlur}
           className={
             formik.errors.groupName
-              ? "borderError inputFocus"
-              : "fieldBorder inputFocus  "
+              ? " w-2/4 borderError inputFocus"
+              : "w-2/4 fieldBorder inputFocus  "
           }
         />
         {formik.touched.groupName &&
@@ -115,8 +115,8 @@ function CreateFlashCard() {
           onBlur={formik.handleBlur}
           className={
             formik.errors.description
-              ? "borderError w-2/3 h-24 resize-none inputFocus "
-              : "fieldBorder w-2/3 h-24 resize-none inputFocus  placeholder:italic placeholder:text-sm placeholder:text-slate-400/100"
+              ? "borderError w-[90%] h-24 resize-none inputFocus "
+              : "fieldBorder w-[90%] h-24 resize-none inputFocus  placeholder:italic placeholder:text-sm placeholder:text-slate-400/100"
           }
         />
         {formik.touched.description &&
@@ -131,6 +131,7 @@ function CreateFlashCard() {
           {renderform.map((item, i) => (
             <li key={i}>
               <TermForm
+                key={i}
                 i={i}
                 onDelet={handleFormDelet}
                 handleAddForm={handleAddForm}
@@ -155,7 +156,7 @@ function CreateFlashCard() {
         type="submit"
         form="myform"
         onClick={handleCreateFlashCard}
-        className="text-center tracking-wide rounded-lg w-[10%] py-1 px-2 my-4 ml-[45%] text-slate-100 bg-red-600 font-medium text-base"
+        className="hover:bg-white hover:text-red-600  hover:shadow-md active:shadow-sm text-center tracking-wide rounded-lg w-20 md:w-[10%] py-1 px-2 my-4 ml-[45%] text-slate-100 bg-red-600 font-medium text-base"
       >
         create
       </button>

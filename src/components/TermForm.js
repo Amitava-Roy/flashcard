@@ -40,15 +40,18 @@ function TermForm({ groupName, onDelet, setCardsArr, i }) {
 
   return (
     <>
-      <form className="flex gap-3 mt-3 mb-3 ">
+      <form className="flex gap-3 mt-3 mb-3 flex-col md:flex-row ">
         <span className="flex justify-center items-center w-5 h-5  bg-red-400/100 text-slate-100 rounded-full">
           {i + 1}
         </span>
-        <fieldset className="flex gap-6" disabled={!show}>
-          <div className="flex flex-col">
+        <fieldset
+          className=" flex flex-col  md:flex-row gap-6"
+          disabled={!show}
+        >
+          <div className="flex flex-col ">
             <label
               htmlFor="term"
-              className="input capitalize"
+              className=" input capitalize"
             >
               term
             </label>
@@ -58,8 +61,8 @@ function TermForm({ groupName, onDelet, setCardsArr, i }) {
               id="term"
               className={
                 formik.errors.term
-                  ? "borderError w-40 h-10"
-                  : "fieldBorder w-40 h-10"
+                  ? "borderError w-4/5 md:w-40 h-10"
+                  : "fieldBorder w-4/5 md:w-40 h-10"
               }
               value={formik.values.term}
               onChange={formik.handleChange}
@@ -81,8 +84,8 @@ function TermForm({ groupName, onDelet, setCardsArr, i }) {
               id="details"
               className={
                 formik.errors.term
-                  ? "borderError w-80 h-10"
-                  : "fieldBorder w-80 h-10"
+                  ? "borderError w-5/6 md:w-80 h-10"
+                  : "fieldBorder w-5/6 md:w-80 h-10"
               }
               value={formik.values.details}
               onChange={formik.handleChange}
@@ -103,6 +106,7 @@ function TermForm({ groupName, onDelet, setCardsArr, i }) {
           />
           {image ? (
             <img
+              key={image}
               src={`${image}`}
               className="self-end"
               style={{ height: "50px", width: "80px" }}
@@ -110,14 +114,14 @@ function TermForm({ groupName, onDelet, setCardsArr, i }) {
           ) : (
             <label
               htmlFor="img"
-              className=" text-blue-600/100 font-medium text-base rounded-lg
-               capitalize self-end border-blue-600/95 border-2 p-2"
+              className="mr-16 md:mr-0 text-center text-blue-600/100 font-medium text-base rounded-lg
+               capitalize self-end border-blue-600/95 border-2 p-2 hover:bg-blue-600/100 hover:text-white"
             >
               select image
             </label>
           )}
 
-          <div className=" input flex flex-col gap-3 ">
+          <div className=" input flex flex-row  md:flex-col gap-4 md:gap3 justify-center ">
             <button onClick={onDelet}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
